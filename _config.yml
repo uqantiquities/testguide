@@ -27,3 +27,5 @@ markdown: kramdown
 
 # Version settings (version number below is used for cache busting CSS and JS)
 version_number: 1.0.0.1
+
+theme: jekyll-theme-cayman
