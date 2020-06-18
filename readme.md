@@ -4,7 +4,7 @@ A [Jekyll](http://jekyllrb.com/) static site generator theme for building lightw
 
 ## Overview
 
-This template is built on top of the [Jekyll new](https://github.com/jglovier/jekyll-new) theme by [Joel Glovier](http://joelglovier.com/). While it is reusable in its current form, it was purpose built for the Scorsese Exhibition at ACMI. Take a look at a live version, and view the [Scorsese Audio Guide](https://guides.acmi.net.au/scorsese/welcome).
+This template is built on top of the [Jekyll new](https://github.com/jglovier/jekyll-new) theme by [Joel Glovier](http://joelglovier.com/). While it is reusable in its current form, it was purpose built for the Scorsese Exhibition at ACMI. Take a look at a live version, and view the [Scorsese Audio Guide](https://guides.acmi.net.au/scorsese/welcome). For a demo of this version, take a look at the Github pages hosted demo: http://acmilabs.github.io/static-museum-audio-guide/welcome/
 
 Some image editing / Photoshop skills will be required to build a finished guide. Parts of the theme (such as the welcome page) are just plain old HTML and will need to be customised for your guide.
 
@@ -33,7 +33,7 @@ There is also a simple page at `/connected` as a landing page if you are using C
   - `page_rank` - this is used to order the stops in the menu and slide-down menu
   - `stop_id` - if you wanted, you could give the stop a different ID number to its page rank, but you should probably keep it the same as the permalink and page_rank.
   - `audio_file` - just the filename and extension of the MP3 file to play
-  - `hero_images` - an array of `path` and `alt_text` values for the hero image on the audio guide stop page. Multiple images will appear in an image carousel (using Slick JS). The `path` should just be the image filename and extension. The folder location is set in the main site settings.
+  - `hero_images` - an array of `path` and `alt_text` values for the hero image on the audio guide stop page. Multiple images will appear in an image carousel (using Slick JS). The `path` should just be the image filename and extension. The folder location is set in the main site settings `config.yml`. Good image settings for this are 512 x 341 pixels (1.5:1 aspect ratio) JPEG at 50 - 60% compression.
 6. Update `config.yml` with settings for your particular guide. You can use the default settings, but be sure to update the `title`, `description`, `url` and `twitter` usernames for your site. If you want to change the folder structure for the MP3s or hero images, you can do that here.
 7. Create a new logo and save it over `/assets/img/logo/audio-guide.png`.
 8. Replace the footer logo and link with your own organisation or partner logos in `_includes/footer.html`.
@@ -67,11 +67,30 @@ To check whether or not to make the player fixed position to the bottom of the s
 
 ## Included JS libraries
 
-Most of the web app (aside from audio!) works without JavaScript, and we've tried to keep to a progressive enhancement approach as much as possible. The following JS libraries have been included here. If you're extending this project, you may wish to switch to CDN copies, or concatenate and minify your libraries.
+Most of the web app (aside from audio!) works without JavaScript, and we've tried to keep to a progressive enhancement approach as much as possible. The following JS libraries have been included here, each is covered by their own MIT license also in the repo. If you're extending this project, you may wish to switch to CDN copies, or concatenate and minify your libraries.
 
 1. [jQuery (v1.12.3)](https://jquery.com/)
 2. [Slick JS (v1.6.0)](http://kenwheeler.github.io/slick/)
 3. [jPlayer (v2.9.2)](http://jplayer.org/)
+
+In this repo, we've chosen to keep these libraries as local assets so that running `jekyll serve` or `jekyll build` from the command-line is as simple as possible. However, you may wish to switch to loading these libraries from a [package library](https://www.npmjs.com/) instead.
+
+## More Info
+
+Read the [ACMI Labs](https://labs.acmi.net.au/) blog posts covering this project:
+
+1. [Making the free audio guide for Scorsese](https://labs.acmi.net.au/making-the-free-audio-guide-for-scorsese-3cf5398e5658#)
+2. [An open source museum audio guide](https://labs.acmi.net.au/an-open-source-static-museum-audio-guide-4c5cd83dbdcb#)
+
+## Other people using this project
+
+If you've built something using this audio guide template, [let us know](https://twitter.com/ACMILabs) and we'll add your project to this list.
+
+1. [Vila Itororó](https://vilaitororo.github.io/bemvindos/) in [São Paulo, Brazil](http://vilaitororo.org.br/) (the tour is in Portuguese). Read [Christophe Buffet's](https://twitter.com/cpjfb) [technical post](https://medium.com/@cpjfb/scorsese-now-has-a-brazilian-clone-adee0a8089a8) on forking the audio guide repo.
+2. [Lustre exhibition audio guide](http://lustre.guide/) for the [Lustre](https://museumvictoria.com.au/immigrationmuseum/whats-on/lustre/) exhibition at the [Immigration Museum](https://museumvictoria.com.au/immigrationmuseum/), part of [Museum Victoria](https://museumvictoria.com.au/) in Melbourne, Australia.
+3. [A Perfect Chemistry: Photographs by Hill & Adamson](https://audio.nationalgalleries.org/), an [audio tour](https://audio.nationalgalleries.org/hill-and-adamson/index.html) for the [exhibition](https://www.nationalgalleries.org/exhibition/perfect-chemistry-photographs-hill-and-adamson) at [National Galleries of Scotland](https://www.nationalgalleries.org/).
+4. [Voces en Off](https://macpanama.github.io/bienvenidos/) an audio project (in Spanish) for the exhibition [Voces en Off: Artistas Mujeres en la Colección Permanente del Mac](http://www.macpanama.org/exhibiciones/2017/voces_en_off.html) at [Museo de Arte Contemporáneo de Panamá, MAC Panamá](http://www.macpanama.org/)
+5. Inspiration for [Kalmar läns Museum](https://github.com/kalmarlansmuseum/MultilangAudioguide)'s multilingual audioguide in Kalmar, Sweden.
 
 ## License
 

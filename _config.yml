@@ -6,17 +6,17 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: ACMI Audio Guide
-email: your-email@example.com
+title: Death and Burial in the Ancient World
+email: antiquitiesmuseum@uq.edu.au
 description: > # this means to ignore newlines until "baseurl:"
-  A web-based audio guide theme for Jekyll.
-baseurl: "/static-museum-audio-guide" # the subpath of your site, e.g. /blog
+  A special audio guide for the RD Milns Antiquities Museum.
+baseurl: "" # the subpath of your site, e.g. /blog
 audio_path: "/audio/"
 episode_hero_path: "/assets/img/stops/"
 url: "http://www.example.com" # the base hostname & protocol for your site
 logo: "/assets/img/logo/audio-guide.png"
-twitter_username: acmilabs
-github_username:  acmilabs
+twitter_username: UQAntiquities
+github_username:  [NIL]
 menu_heading: "Select another stop"
 index_page_text: "Select an audio guide stop to begin."
 headphones_icon_color: "/assets/img/icons/headphones-dark.png"
@@ -27,5 +27,3 @@ markdown: kramdown
 
 # Version settings (version number below is used for cache busting CSS and JS)
 version_number: 1.0.0.1
-
-theme: jekyll-theme-cayman
